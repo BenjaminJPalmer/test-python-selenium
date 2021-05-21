@@ -29,6 +29,9 @@ class PythonOrgsearch(unittest.TestCase):
             sleep(1)
             filename = 'screenshots/' + url.split('//')[-1] + '.png' # Removes / from the filename
             browser.save_screenshot(filename)
+            # TODO fail condition to continue if url fails
+            # TODO number screenshots to correlate
+            # TODO write screenshot name in csv
         
     # Closes the browser once all webpages are visited
     def tearDown(self):
