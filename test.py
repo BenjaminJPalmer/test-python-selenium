@@ -25,13 +25,15 @@ class PythonOrgsearch(unittest.TestCase):
     def test_search_in_python_org(self):
         browser = self.browser
         for url in newData:
-            browser.get(url)
-            sleep(1)
-            filename = 'screenshots/' + url.split('//')[-1] + '.png' # Removes / from the filename
-            browser.save_screenshot(filename)
-            # TODO fail condition to continue if url fails
-            # TODO number screenshots to correlate
-            # TODO write screenshot name in csv
+            try:
+                browser.get(url)
+                sleep(1)
+                filename = 'screenshots/' + url.split('//')[-1] + '.png' # Removes / from the filename
+                browser.save_screenshot(filename)
+                # TODO number screenshots to correlate
+                # TODO write screenshot name in csv
+            except:
+                print(f"Assertion failed with {url}.")
         
     # Closes the browser once all webpages are visited
     def tearDown(self):
