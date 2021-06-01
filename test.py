@@ -4,15 +4,15 @@ from time import sleep
 from selenium import webdriver
 
 # Open csv to read and convert to a list
-with open(r"C:\Users\benpa\Documents\GitHub\test-python-selenium\website-test.csv", newline='') as f:
-    reader = csv.reader(f)
+with open(r"C:\Users\benpa\Documents\GitHub\test-python-selenium\website-test.csv", newline='') as file:
+    reader = csv.reader(file)
     data = list(reader)
 
 # Initiate list for converting items into strings
 newData = []
-for s in data:
-    s1 = ''.join(s)
-    newData.append(s1)
+for site in data:
+    newSite = ''.join(site)
+    newData.append(newSite)
 
 # Start test case to search python.org
 class PythonOrgsearch(unittest.TestCase):
@@ -32,6 +32,7 @@ class PythonOrgsearch(unittest.TestCase):
                 browser.save_screenshot(filename)
                 # TODO number screenshots to correlate
                 # TODO write screenshot name in csv
+                # TODO export as simple HTML with url correlating to image link / error
             except:
                 print(f"Assertion failed with {url}.")
         
