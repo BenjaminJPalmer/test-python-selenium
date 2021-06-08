@@ -8,4 +8,4 @@ In it's current state, the .py file will take the urls from the .csv file. For e
 
 ## TODO
 
-Add writing funcitonality so that the screenshot name or error message is printed to the .csv file.
+Add writing functionality so that the screenshot name or error message is printed to the .csv file.
