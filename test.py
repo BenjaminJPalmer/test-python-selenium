@@ -15,14 +15,14 @@ for site in data:
     newData.append(newSite)
 
 # Start test case to search python.org
-class PythonOrgsearch(unittest.TestCase):
+class WebsiteScreenshotCheck(unittest.TestCase):
 
     # Initiate the chrome browser
     def setUp(self):
         self.browser = webdriver.Chrome()
 
     # Visit webpage, wait for 1 second then save a screenshot
-    def test_search_in_python_org(self):
+    def test_websites_and_screenshot(self):
         browser = self.browser
         for url in newData:
             try:
@@ -33,6 +33,7 @@ class PythonOrgsearch(unittest.TestCase):
                 # TODO number screenshots to correlate
                 # TODO write screenshot name in csv
                 # TODO export as simple HTML with url correlating to image link / error
+                # TODO iterate through navbar links to check pages
             except:
                 print(f"Assertion failed with {url}.")
         
