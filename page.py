@@ -4,7 +4,8 @@ from seleniumbase import BaseCase
 
 class MyTestClass(BaseCase):
     def test_base(self):
-        self.open("http://gme-painting.dev.ascensor.co.uk/")
+        self.open(url)        
+        #TODO add csv with urls
         elements = self.find_elements('li.menu-item a')
         nav_links = []
         for element in elements:
