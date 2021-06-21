@@ -12,3 +12,7 @@ Different approach using seleniumbase to tackle the issue of taking screenshots 
 
 ### page.py
 Following on from the above, page.py will try to visit each of the urls listed above and take a screenshot, displaying errors if there are any. 
+
+## TODO
+
+The above are currently optimised for a specific CSS selector where pages are located by `"li.menu-item a"`. It will need testing to see if it works with just `"li a"` as a selector as not all sites consistently have "menu-item" as a class.
