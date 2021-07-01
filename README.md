@@ -16,3 +16,5 @@ Following on from the above, page.py will try to visit each of the urls listed a
 ## TODO
 
 The above are currently optimised for a specific CSS selector where pages are located by `"li.menu-item a"`. It will need testing to see if it works with just `"li a"` as a selector as not all sites consistently have "menu-item" as a class.
+
+	> This appears to work and has overall better coverage despite bringing in some redundant links (social media, etc). Slightly slower speeds are expected (test data of 8 urls == 4:30 for "li.menu-item a" and 5:45 for "li a"
