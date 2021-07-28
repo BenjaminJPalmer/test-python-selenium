@@ -1,3 +1,5 @@
-\__pycache__
-website-test.csv
-\latest_logs
+/__pycache__/
+*.csv
+/latest_logs/
+/archived_logs/
+/.pytest_cache/
