@@ -47,6 +47,7 @@ class MyTestClass(BaseCase):
                     try:
                         self.open(nav_link)
                         # Visual check in case of 404 error pages
+                        # TODO change this to a request status code check?
                         if self.is_text_visible("404 Error", "h1"):
                             bad_links.append(nav_link)
                             print(f"* Bad page: {nav_link}")
@@ -54,5 +55,6 @@ class MyTestClass(BaseCase):
                             self.save_screenshot_to_logs()
                             print(f"{nav_link} saved.")
                     except:
+                        bad_links.append(nav_link) # Added to collate bad links on page fail
                         print(f"Error trying to open {nav_link}.")
                         continue
