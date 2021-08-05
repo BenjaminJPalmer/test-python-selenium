@@ -52,7 +52,7 @@ class MyTestClass(BaseCase):
                             bad_links.append(nav_link)
                             print(f"* Bad page: {nav_link}")
                         else:
-                            self.save_screenshot_to_logs()
+                            self.save_screenshot_to_logs() # TODO add name as argument
                             print(f"{nav_link} saved.")
                     except:
                         bad_links.append(nav_link) # Added to collate bad links on page fail
