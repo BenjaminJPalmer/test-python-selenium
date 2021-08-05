@@ -39,7 +39,7 @@ class MyTestClass(BaseCase):
                         unique_nav_links.append(nav_link)
                 
                 bad_links = []
-                test_logpath = os.path.join(self.log_path, self.test_id)
+                test_logpath = os.path.join(self.log_path, self.test_id) # TODO Change to (..., url)?
                 #TODO update folder naming with iterator for each test run
                 print(f"\n  Screenshot location: {test_logpath}")
 
